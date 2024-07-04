@@ -2,96 +2,69 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Lucas Schmitt
     - name: Date of Birth
-      value: 14th March 1879
+      value: 22th July 1999
     - name: Languages
-      value: English, German
+      value: German, English, French
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: M.Sc. Mathematics
+      institution: Heidelberg University, Heidelberg, Germany
+      year: 2024
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        -Thesis title: Existence of Gradient Flows and its Application to Models related to Pattern Formation
+        -Supervisor: Prof. Dr. Hans Knüpfer
+
+    - title: B.Sc. Mathematics
+      institution: Heidelberg University, Heidelberg, Germany
+      year: 2022
       description:
-        - Description 1.
-        - Description 2.
+        -Thesis title: Finite and Infinite-Dimensional Problems in Control Theory
+        -Supervisor: Prof. Dr. Angkana Rüland
+
+    - title: Abitur
+      institution: Hohenstaufen-Gymnasium, Bad Wimpfen, Germany
+      year: 2017
+      description:
+        
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Tutor 
+      institution: Institute of Mathematics, Heidelberg University
+      year: 2023
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        -Partial Differential Equations
+    - title: Programming internship
+      institution: Research Group Numerical Optimization, Heidelberg University
+      year: 2021-2022
       description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
+        
+      
 
 - title: Open Source Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: <a href="https://github.com/slausmeister/AutoHDR">AutoHDR</a>
+      year: 2024
+      description: A Vison transformer based model to enable autometic HDR settings.
 
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Mathematics
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Partial Differential Equations
+        - Calculus of Variations
+        - Modelling
+    - title: Computer Science
       items:
-        - Description 1.
-        - Description 2.
+        - Machine Learning
+        - Numerical Analysis
 
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+
