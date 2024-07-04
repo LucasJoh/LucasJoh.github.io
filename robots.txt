@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://lucasjoh.github.io/sitemap.xml
+Sitemap: https://lucas-schmitt.de/sitemap.xml
