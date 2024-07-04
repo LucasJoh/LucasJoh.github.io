@@ -7,6 +7,7 @@ dropdown: true
 children:
   - title: CV
     permalink: /cv/
+  - title: divider
   - title: AutoHDR
     permalink: /AutoHDR/
   - title: divider
