@@ -2,21 +2,24 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: 
 
 profile:
   align: right
   image: front_img.jpg
   image_circular: false # crops the image to make it circular
-  more_info: 
+  more_info: "<i class='fas fa-map-marker-alt'></i> Heidelberg, Germany"
 
 news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
+I am a master student in the group of [Prof. Dr. Hans Knüpfer](https://www.uni-heidelberg.de/math/knuepfer/) at the Institute of Mathematics at the Heidelberg University.
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+My research interests include *Partial Differential Equations* and their *Numerical Analysis*, *Calculus of Variations* and *Machine Learning*.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+More precisely, in my master's thesis I analyize dynamics of second-order phase field models and the emergence of pattern formation in nonlinear systems through the application of variational techniques. I am also currently working on the implementation of a Vision Transformer based model to enable automatic HDR settings, see [AutoHDR](https://lucas-schmitt.de/autohdr).
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I am member of the STRUCTURES Young Researchers Convent ([YRC](https://structures.uni-heidelberg.de/team.php?show_member_yrc=342)), a subgroup of the STRUCTURES Cluster of Excellence at Heidelberg University.
+
+I am also interested in the data-based analysis of long-term developement of young players in handball.
