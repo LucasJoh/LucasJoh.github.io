@@ -130,8 +130,8 @@ We initialize Google's vit-base-patch16-224 ViT, replace the classifier and star
     <th>Without Pretraining</th>
   </tr>
   <tr>
-    <td><img src="../assets/img/pretrained_loss.png" width="400"></td>
-    <td><img src="../assets/img/unpretrained_loss.png" width="400"></td>
+    <td><img src="../assets/img/pretrained_loss.png" width="350"></td>
+    <td><img src="../assets/img/unpretrained_loss.png" width="350"></td>
   </tr>
 </table>
 
