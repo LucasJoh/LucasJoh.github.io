@@ -38,7 +38,7 @@
       institution: Institute of Mathematics, Heidelberg University
       year: 2023
       description:
-        - Partial Differential Equations
+        - Partial Differential Equations (SoSe 2023)
     - title: Programming internship
       institution: Research Group Numerical Optimization, Heidelberg University
       year: 2021-2022
@@ -51,7 +51,7 @@
   contents:
     - title: <a href="https://github.com/slausmeister/AutoHDR">AutoHDR</a>
       year: 2024
-      description: A Vison transformer based model to enable autometic HDR settings.
+      description: A Vision transformer based model to enable autometic HDR settings.
 
 
 - title: Academic Interests
