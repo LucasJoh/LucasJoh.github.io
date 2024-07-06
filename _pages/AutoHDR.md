@@ -9,7 +9,7 @@ toc:
   sidebar: left
 ---
 
-*joint work of [Viktor Stein](https://stani-stein.com)* and [Lucas Schmitt](https://lucas-schmitt.de)
+*joint work of [Viktor Stein](https://stani-stein.com) and [Lucas Schmitt](https://lucas-schmitt.de)*
 
 Best viewed in an HDR compatible browser (Chrome) on an HDR compatible display.
 
@@ -54,8 +54,8 @@ The only problem with Adobe's HDR implementation is that the autosettings do not
     <th>Model Predicted Autosettings</th>
   </tr>
   <tr>
-    <td><img src="../assets/img/AdobeHDR.jpg" width="200"></td>
-    <td><img src="../assets/img/AutoHDR.jpg" width="200"></td>
+    <td><img src="../assets/img/AdobeHDR.jpg" width="250"></td>
+    <td><img src="../assets/img/AutoHDR.jpg" width="250"></td>
   </tr>
 </table>
 
@@ -124,9 +124,16 @@ As the labels are continuous values we employ an MSE loss and train using Adam i
 ## With and without pretraining
 We initialize Google's vit-base-patch16-224 ViT, replace the classifier and start training. We expected that during fine tuning we would need to carefully consider which layers to freeze and which layers to train. In actuality the naive approach of letting the model adjust all training parameters with the same learning rate works incredibly well converging after essentially one epoch. Therefore we also compared training without pretraining and see, that whilst convergence is a bit slower, the model also learns to capture the correct relationship.
 
-| With Pretraining | Without Pretraining |
-| :------: | :------: |
-| ![Loss](../assets/img/pretrained_loss.png) | ![Loss](../assets/img/unpretrained_loss.png) |
+<table>
+  <tr>
+    <th>With Pretraining</th>
+    <th>Without Pretraining</th>
+  </tr>
+  <tr>
+    <td><img src="../assets/img/pretrained_loss.png" width="400"></td>
+    <td><img src="../assets/img/unpretrained_loss.png" width="400"></td>
+  </tr>
+</table>
 
 Fig 3: We see that the network pretty much converges after the first epoch until it eventually overfits. We will later try to mitigate the overfitting using label smoothing (see section [Label Smoothing](#label-smoothing)). In both cases the final loss is usually around 0.02.
 
@@ -138,13 +145,13 @@ Even though both the pre- and the unpretrained approach both prove very successf
 ## Understanding the Data
 Our first suspicion for the unreasonable performance of our network is, that the data has a very simple structure. It might be possible, that settings such as Exposure or Saturation are essentially the same for all images in the training data. If this were the case, the network could always make a constant guess without being penalized significantly. We are therefore interested in the underlying statistics of the training labels.
 
-![](../assets/img/data_statistics.png)
+<img src="../assets/img/data_statistics.png" width="700">
 
 Fig 4: Histogram of the labels in the training dataset
 
 We can clearly see, that some labels are actually quite simple. Saturation and Vibrance almost always have the same value. We expect that the network learns low weights and a bias reflecting the value for these settings.
 
-![](../assets/img/nework_wab.png)
+<img src="../assets/img/nework_wab.png" width="700">
 
 Fig 5: In red the bias value for each setting and in blue the average connection strength to that node.
 
@@ -152,7 +159,7 @@ We can see that this hypothesis was false. There is no clear pattern of a specif
 
 Still, we suspect that a fixed guess might perform quite well. We therefore calculate the mean and standard deviation for each label and construct a simple guesser that picks its label suggestions from a normal distribution with the calculated variance and standard deviation. This guesser considers only the label space and does not take the input image into consideration.
 
-![](../assets/img/mean_and_std.png)
+<img src="../assets/img/mean_and_std.png" width="700">
 
 Fig 6: Mean and standard deviation of labels in training dataset.
 
@@ -163,9 +170,16 @@ We now seek to understand the attention heads. The hope is that there is a certa
 
 The ViT works on 16 x 16 tokens plus the cls token in 12 layers using 12 attention heads. For our visualization we highlight the patches that were most attended by each attention head for the cls token. We select a subset of layers and attention maps to make it a bit less convoluted.
 
-| Input | Attention Maps |
-| :------: | :------: |
-| ![Loss](../assets/img/attention_input.jpg) | ![Loss](../assets/img/attention_map.png) |
+<table>
+  <tr>
+    <th>Input</th>
+    <th>Attention Maps</th>
+  </tr>
+  <tr>
+    <td><img src="../assets/img/attention_input.jpg" width="300"></td>
+    <td><img src="../assets/img/attention_map.png" width="500"></td>
+  </tr>
+</table>
 
 Fig 7: The left image was provided as input to the model, and a subset of attention heads was chosen for the right visualization. We selected every second attention head from every second transformer layer.
 
@@ -194,7 +208,8 @@ for i in range(3):
     imgs.append(transforms.functional.rotate(transforms.functional.hflip(original_img), 90.0*i))
 plot_images(imgs)
 ```
-![Rotation and Flipping](../assets/img/rotations.png)
+
+<img src="../assets/img/rotations.png" width="700">
 
 **Shearing**
 
@@ -206,7 +221,8 @@ for _ in range(3):
     transforms.RandomPerspective(distortion_scale=0.2, p=1.0)(original_img)
 plot_images(imgs)
 ```
-![Random Perspective](../assets/img/random_perspective.png)
+
+<img src="../assets/img/random_perspective.png" width="700">
 
 
 ### Non-Geometric Image Manipulation
@@ -223,7 +239,7 @@ for _ in range(3):
 plot_images(imgs)
 ```
 
-![Random Cropping and Resize](../assets/img/random_cropping.png)
+<img src="../assets/img/random_cropping.png" width="700">
 
 **Distortion**
 
@@ -235,7 +251,8 @@ for i in range(3):
     imgs.append(transforms.ElasticTransform(alpha=[50.+50.*i])(original_img))
 plot_images(imgs)
 ```
-![Distortion](../assets/img/distortion.png)
+
+<img src="../assets/img/distortion.png" width="700">
 
 **Gaussian blurring**
 
@@ -247,7 +264,8 @@ for _ in range(3):
     imgs.append(transforms.GaussianBlur(kernel_size=(9,9), sigma=(0.1,5.0))(original_img))
 plot_images(imgs)
 ```
-![Gaussian Blur](../assets/img/gaussian_blur.png)
+
+<img src="../assets/img/gaussian_blur.png" width="700">
 
 ### Image Erasing
 By taking out parts of the image one hopefully drops out dominant regions that could prevent the model from learning less sensitive information beforehand. Without them, we enhance a more robust model. However, these methods may inadvertently remove important parts relevant to our task. Known examples for Image Erasing are random erasing, cutout or hide-and-seek, see [Kumar et al., 2023].
@@ -280,7 +298,8 @@ for _ in range(3):
     imgs.append(gridmask_deletion(original_img, r=0.6, d_min=30, d_max=70))
 plot_images(imgs)
 ```
-![Gridmask deletion](../assets/img/grid_mask.png)
+
+<img src="../assets/img/grid_mask.png" width="700">
 
 ### Advanced Image Manipulation
 **Local Rotation**
@@ -295,7 +314,7 @@ for _ in range(3):
 plot_images(imgs)
 ```
 
-![Local Rotation](../assets/img/local_rotation.png)
+<img src="../assets/img/local_rotation.png" width="700">
 
 # Label smoothing
 Label smoothing tackles the problem that the labels in the dataset are noisy. This noise is especially relevant in our dataset, as in the artistic process of editing a photo, there are no right or wrong settings. Furthermore if you were to give a photographer the same photo to edit twice, we are quite certain, that the result would not be the same.
@@ -324,7 +343,7 @@ def smoothing(labels, method='moving_average', window_size=5, sigma=2):
 # Evaluating Data Augmentations
 For evaluation we iterate over every possible augmentation method and select hyperparameters such that the amount of data is increased by factor eight. This value is chosen since it is the maximal factor using flipping and rotation and we want to obtain comparable results. Each augmentation method is combined with either no label smoothing, moving average or gaussian smoothing. Overall we obtain 21 possible combinations of label smoothing and data augmentation. For each of them the model is trained 30 times with a 0.05/0.95 training/validation split, simulating extreme data scarcity. We average the validation losses across all 30 models.
 
-![](/assets/compare_aug_losses.png)
+<img src="../assets/img/compare_aug_losses.png" width="700">
 
 Fig 8: Comparison average epoch validation losses of different augmentations. See [stani-stein.com/AutoHDR](https://www.stani-stein.com/AutoHDR/#evaluating-data-augmentations) for an interactive version of the plot.
 
