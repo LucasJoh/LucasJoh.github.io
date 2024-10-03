@@ -11,19 +11,25 @@
 - title: Education
   type: time_table
   contents:
+    - title: Ph.D. in Mathematics
+      institution: University of Würzburg, Germany
+      year: currently
+      description: 
+        - Geometric Methods for Adversarial Robustness
+        - Supervisor <a href="https://sites.google.com/view/leon-bungert/">Prof. Dr. Leon Bungert</a>
     - title: M.Sc. Mathematics
-      institution: Heidelberg University, Heidelberg, Germany
+      institution: Heidelberg University, Germany
       year: 2024
       description:
         - Thesis title <i>Existence of Gradient Flows and its Application to Models related to Pattern Formation</i>
-        - Supervisor [Prof. Dr. Hans Knüpfer](https://www.uni-heidelberg.de/math/knuepfer/)
+        - Supervisor <a href="https://www.uni-heidelberg.de/math/knuepfer/">Prof. Dr. Hans Knüpfer</a>
 
     - title: B.Sc. Mathematics
-      institution: Heidelberg University, Heidelberg, Germany
+      institution: Heidelberg University, Germany
       year: 2022
       description:
         - Thesis title <i>Finite and Infinite-Dimensional Problems in Control Theory</i>
-        - Supervisor Prof. Dr. Angkana Rüland
+        - Supervisor <a href="https://www.iam.uni-bonn.de/pde-inverse-problems/people/angkana-rueland">Prof. Dr. Angkana Rüland</a>
 
     - title: Abitur
       institution: Hohenstaufen-Gymnasium, Bad Wimpfen, Germany
