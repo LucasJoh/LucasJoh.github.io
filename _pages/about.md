@@ -8,18 +8,16 @@ profile:
   align: right
   image: front_img.jpg
   image_circular: false # crops the image to make it circular
-  more_info: "<i class='fas fa-map-marker-alt'></i> Heidelberg, Germany"
+  more_info: "<i class='fas fa-map-marker-alt'></i> Würzburg, Germany"
 
 news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
-I am a master student in the group of [Prof. Dr. Hans Knüpfer](https://www.uni-heidelberg.de/math/knuepfer/) at the Institute of Mathematics at the Heidelberg University.
+I am a Ph. D. student of [Prof. Dr. Leon Bungert](https://sites.google.com/view/leon-bungert/home) at the Institute of Mathematics at the [University of Würzburg](https://www.uni-wuerzburg.de/en/home/) and part of the team of [Mathematics of Machine Learning](https://www.mathematik.uni-wuerzburg.de/en/machinelearning/).
 
-My research interests include *Partial Differential Equations* and their *Numerical Analysis*, *Calculus of Variations* and *Machine Learning*.
+My research interests include *Partial Differential Equations* and their *Numerical Analysis* as well as *Calculus of Variations* with a particular focus on *Machine Learning*.
 
-More precisely, in my master's thesis I analyize dynamics of second-order phase field models and the emergence of pattern formation in nonlinear systems through the application of variational techniques. I am also currently working on the implementation of a Vision Transformer based model to enable automatic HDR settings, see section [AutoHDR](https://lucas-schmitt.de/AutoHDR).
-
-I am member of the STRUCTURES Young Researchers Convent ([YRC](https://structures.uni-heidelberg.de/team.php?show_member_yrc=342)), a subgroup of the STRUCTURES Cluster of Excellence at the Heidelberg University.
+More precisely, I currently investigate adversarial robustness of machine learning using variational methods and geometric approaches in the DFG-project [GeoMAR](https://www.mathematik.uni-wuerzburg.de/en/machinelearning/research/projects/). The aim is to create new effective approaches for adversarial training by developing s suitable mathematical theory and transfer the knowlege into algorithms.
 
 I am also interested in the data-based analysis of long-term developement of young players in handball, see section [Handball Metastats](https://lucas-schmitt.de/HBmeta).
