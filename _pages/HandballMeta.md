@@ -5,6 +5,8 @@ title: Handball Metastats
 description: Longterm developement of players driven by data based analysis
 nav: true
 nav_order: 3
+toc:
+  sidebar: left
 ---
 # Motivation
 The aim of this project is to introduce data-driven analysis as an additional tool for developing young athletes and to make it accessible to ambitious teams that may not have a professional infrastructure. This initiative is not focused on using statistics to maximize a team’s success in individual games. Instead, it aims to help players and their coaches to evaluate their long-term development independent of match-day results.
@@ -58,7 +60,7 @@ The following example demonstrates a possible idea to work with the statistics g
 <div style="float: right; margin: 10px;">
  <figure>
   <a href="../assets/img/stats_bsp.png" target="_blank">
-    <img src="../assets/img/stats_bsp.png" alt="Game Statistics" width="300px" style="border-radius: 8px;">
+    <img src="../assets/img/stats_bsp.png" alt="Game Statistics" width="450px" style="border-radius: 8px;">
   </a>
   <figcaption style="text-align: center; font-size: 0.9em; color: #555;">Game Statistics</figcaption>
  </figure>
@@ -67,7 +69,7 @@ Although the game ended with a close win for Rhein-Neckar Löwen (30:29), the ra
 <div style="float: left; margin: 10px;">
  <figure>
   <a href="../assets/img/pie_chart_Goals against_Absolute.png" target="_blank">
-    <img src="../assets/img/pie_chart_Goals against_Absolute.png" alt="Distribution of conceded goals" width="300px" style="border-radius: 8px;">
+    <img src="../assets/img/pie_chart_Goals against_Absolute.png" alt="Distribution of conceded goals" width="350px" style="border-radius: 8px;">
   </a>
   <figcaption style="text-align: center; font-size: 0.9em; color: #555;">Distribution of conceded goals</figcaption>
  </figure>
@@ -75,10 +77,10 @@ Although the game ended with a close win for Rhein-Neckar Löwen (30:29), the ra
 At this level of U15 handball, game tempo is generally intense. In this match, each team executed 63 attacks in 50 minutes, meaning ball possession changed in average every 24 seconds.  So there is still a lot of untapped potential in tempo defence. One approach is to sustaining pressure on the attacking team during third-wave phases. With this counter-pressing tactic, you either try to make your opponent lose the ball or get them into the positional attack. The low number of third-wave goals conceded, combined with the overweight in steals, at least indicates a successful tempo defence. Here a more detailed analysis could examine the type of steals and technical faults occurring during third-wave attacks, and shot types created by the attacking team. Lastly, for an individual performance evaluation both scores- the HPI and Playerscore- are helpful. Here, both scores yield similar results, but clearly indicating the key players in this game. Comparing with the eye-test there are at least some surprises in these TOP5-lists. When comparing HPI and Playerscore, the switch in rankings for certain players could indicate their greater ability to make smart plays under pressure. However, to make such conclusions, we would need data from multiple games.
 <figure>
   <a href="../assets/img/HPI_bsp.png" target="_blank">
-    <img src="../assets/img/HPI_bsp.png" alt="HPI" width="500px" style="border-radius: 8px;">
+    <img src="../assets/img/HPI_bsp.png" alt="HPI" width="650px" style="border-radius: 8px;">
   </a>
   <a href="../assets/img/PS_bsp.png" target="_blank">
-    <img src="../assets/img/PS_bsp.png" alt="PS" width="500px" style="border-radius: 8px;">
+    <img src="../assets/img/PS_bsp.png" alt="PS" width="650px" style="border-radius: 8px;">
   </a>
   <figcaption style="text-align: center; font-size: 0.9em; color: #555;">TOP5 of HPI and Playerscore</figcaption>
  </figure> 
