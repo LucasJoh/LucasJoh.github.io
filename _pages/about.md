@@ -6,7 +6,7 @@ subtitle:
 
 profile:
   align: right
-  image: front_img.jpg
+  image: new_front_img.jpg
   image_circular: false # crops the image to make it circular
   more_info: "<i class='fas fa-map-marker-alt'></i> Würzburg, Germany"
 
