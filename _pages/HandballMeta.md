@@ -8,6 +8,8 @@ nav_order: 3
 toc:
   sidebar: left
 ---
+If needed, click on the images to display them correctly.
+
 # Motivation
 The aim of this project is to introduce data-driven analysis as an additional tool for developing young athletes and to make it accessible to ambitious teams that may not have a professional infrastructure. This initiative is not focused on using statistics to maximize a team’s success in individual games. Instead, it aims to help players and their coaches to evaluate their long-term development independent of match-day results.
 While there is a solid scientific foundation for developing attributes like strength, speed, and endurance, there remains, to my knowledge, limited understanding of which measurable data points can reliably predict a young player’s eventual performance level, and which metrics are less relevant. Even when there are clear developmental goals for certain skills, we often lack effective ways to verify them or at least do not know how to verify them. Let me make this clear with the following example.
@@ -37,21 +39,23 @@ In particular, I began challenging myself to record as much information as possi
 <div style="float: right; margin: 10px;">
  <figure>
   <a href="../assets/img/tracking_menu.png" target="_blank">
-    <img src="../assets/img/tracking_menu.png" alt="Tracking Menu" width="450px" style="border-radius: 8px;">
+    <img src="../assets/img/tracking_menu.png" alt="Tracking Menu" width="400px" style="border-radius: 8px;">
   </a>
   <figcaption style="text-align: center; font-size: 0.9em; color: #555;">Tracking Menu</figcaption>
  </figure>
 </div>
-However, I quickly realized that manually tracking these stats is challenging to sustain, so in the following weeks, I began designing the structure of a tracking tool that would allow for efficient data collection. This led to the development of the first terminal-based event tracker with basic analysis capabilities. Over the next year and a half, I created two new versions of the terminal-based tracker, a graphical user interface for the new tracker, new statistical analyses, options for long-term statistics, a tool for creating folders containing a possible statistics in a structured way and a complete visualization.
-<div style="float: left; margin: 10px;">
+However, I quickly realized that manually tracking these stats is challenging to sustain, so in the following weeks, I began designing the structure of a tracking tool that would allow for efficient data collection. This led to the development of the first terminal-based event tracker with basic analysis capabilities. 
+<div style="float: right; margin: 10px;">
  <figure>
   <a href="../assets/img/event_menu.png" target="_blank">
-    <img src="../assets/img/event_menu.png" alt="Event Menu" width="450px" style="border-radius: 8px;">
+    <img src="../assets/img/event_menu.png" alt="Event Menu" width="400px" style="border-radius: 8px;">
   </a>
   <figcaption style="text-align: center; font-size: 0.9em; color: #555;">Event Menu</figcaption>
  </figure>
-</div> 
+</div>
+Over the next year and a half, I created two new versions of the terminal-based tracker, a graphical user interface for the new tracker, new statistical analyses, options for long-term statistics, a tool for creating folders containing a possible statistics in a structured way and a complete visualization. 
 I successfully tracked an entire season of youth handball and gathered the first results and impressions. The idea had come to life, and the first steps were taken, though there is still a long journey ahead.
+
 
 # Current Capabilities
 The current version of the tool provides five main classes of analysis: stat sheets, pace analysis, conversion rates, absolute stats and performance scores. These categories can sometimes overlap, and a few of the names may seem misleading, so I’ll briefly clarify each. The stat sheets are a reminiscent to the project’s origin. They are basically a straightforward record of the game, similar to what I would capture using pen and paper. There is no deeper analysis done and a lot of information is dropped. However, it is clearly organised and in a single view. In the pace analysis the game’s tempo by tracking the number of attacks and the number of goals scored per 50 attacks. The conversion rates consist of stats such as shots taken, goals scored and conceded, the shot-to-goal ratio, expected goals (xG), the difference of expected and actual goals and the expected goals per shot. Those numbers are broken down to nearly every possible combination of shot scenarios including position, distance, game phase, and shot type. Absolute stats cover all other raw numbers collected during the game, such as assists, steals, blocks and technical faults. Finally, the performance scores offer two different approaches: Handball-Performance-Index (HPI) and Playerscore. The first one works similarly to the idea of expected goals but extends to all type of actions. Here, each action type has a specific weight, which is summed up for each player which then leads to a score. Playerscore, on the other hand, scores every action equally but adjusts weights based on game time and score context. For instance, a goal scored in a tight, late-phase game has a higher value than one scored early on or in a game with a decisive lead. In essence, HPI emphasizes the type of action, while Playerscore considers the game situation in which the action occurs.
@@ -77,7 +81,7 @@ Although the game ended with a close win for Rhein-Neckar Löwen (30:29), the ra
 At this level of U15 handball, game tempo is generally intense. In this match, each team executed 63 attacks in 50 minutes, meaning ball possession changed in average every 24 seconds.  So there is still a lot of untapped potential in tempo defence. One approach is to sustaining pressure on the attacking team during third-wave phases. With this counter-pressing tactic, you either try to make your opponent lose the ball or get them into the positional attack. The low number of third-wave goals conceded, combined with the overweight in steals, at least indicates a successful tempo defence. Here a more detailed analysis could examine the type of steals and technical faults occurring during third-wave attacks, and shot types created by the attacking team. Lastly, for an individual performance evaluation both scores- the HPI and Playerscore- are helpful. Here, both scores yield similar results, but clearly indicating the key players in this game. Comparing with the eye-test there are at least some surprises in these TOP5-lists. When comparing HPI and Playerscore, the switch in rankings for certain players could indicate their greater ability to make smart plays under pressure. However, to make such conclusions, we would need data from multiple games.
 <figure>
   <a href="../assets/img/HPI_bsp.png" target="_blank">
-    <img src="../assets/img/HPI_bsp.png" alt="HPI" width="650px" style="border-radius: 8px;">
+    <img src="../assets/img/HPI_bsp.png" alt="HPI" width="650px" style="border-radius: 8px; margin-bottom: 20px;">
   </a>
   <a href="../assets/img/PS_bsp.png" target="_blank">
     <img src="../assets/img/PS_bsp.png" alt="PS" width="650px" style="border-radius: 8px;">
