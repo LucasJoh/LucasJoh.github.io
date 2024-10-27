@@ -18,6 +18,6 @@ I am a Ph. D. student of [Prof. Dr. Leon Bungert](https://sites.google.com/view/
 
 My research interests include *Partial Differential Equations* and their *Numerical Analysis* as well as *Calculus of Variations* with a particular focus on *Machine Learning*.
 
-More precisely, I currently investigate adversarial robustness of machine learning using variational methods and geometric approaches in the DFG-project [GeoMAR](https://www.mathematik.uni-wuerzburg.de/en/machinelearning/research/projects/). The aim is to create new effective approaches for adversarial training by developing s suitable mathematical theory and transfer the knowlege into algorithms.
+More precisely, I currently investigate adversarial robustness of machine learning using variational methods and geometric approaches in the DFG-project [GeoMAR](https://www.mathematik.uni-wuerzburg.de/en/machinelearning/research/projects/). The aim is to create new effective approaches for adversarial training by developing a suitable mathematical theory and transfer the knowlege into algorithms.
 
 I am also interested in the data-based analysis of long-term developement of young players in handball, see section [Handball Metastats](https://lucas-schmitt.de/HBmeta).
