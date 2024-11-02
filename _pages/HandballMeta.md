@@ -86,7 +86,7 @@ At this level of U15 handball, game tempo is generally intense. In this match, e
   <a href="../assets/img/PS_bsp.png" target="_blank">
     <img src="../assets/img/PS_bsp.png" alt="PS" width="650px" style="border-radius: 8px;">
   </a>
-  <figcaption style="text-align: center; font-size: 0.9em; color: #555;">TOP5 of HPI and Playerscore</figcaption>
+  <figcaption style="text-align: center; font-size: 0.9em; color: #555;">TOP5 of HPI and Playerscore (Numbers changed)</figcaption>
  </figure> 
 Let us stop this analysis here for now. I hope to show the depth of insight that can be gained from a single game in this example. While not every insight requires detailed statistics, and some may be less relevant, deeper analysis almost always uncovers valuable findings that might otherwise be missed.
 For an example of a full-season analysis, take a look at the article I wrote for [hghandball.de](https://www.hghandball.de/saisonbericht-mal-anders/).
